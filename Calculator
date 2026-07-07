@@ -1,0 +1,21 @@
+class Solution {
+    public void calculate(int a, int b, int operator) {
+        // code here
+        if(operator==1){
+            int sum=a+b;
+            System.out.print(sum);
+        }
+        else  if(operator==2){
+            int subtract=a-b;
+            System.out.print(subtract);
+        }
+        else if(operator==3){
+            int multiply=a*b;
+            System.out.print(multiply);
+        }
+        else{
+            System.out.print("invalid input");
+        }
+        
+    }
+}
