@@ -1,0 +1,20 @@
+class Solution {
+    static double switchCase(int choice, List<Double> arr) {
+        // code here
+        
+        if(choice==1){
+            double R=arr.get(0);
+            double area=Math.PI*R*R;
+            return area;
+    
+        }
+        else if(choice==2){
+           double  L=arr.get(0);
+           double  B=arr.get(1);
+           double area=L*B;
+            return area;
+            
+        }
+        return 0;
+    }
+}
