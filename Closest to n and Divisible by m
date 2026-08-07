@@ -1,0 +1,31 @@
+class Solution {
+    static int closestNumber(int n, int m) {
+        // code here
+        int lower = n;
+        int higher = n;
+        while(lower%m!=0){
+            lower--;
+        }
+        while(higher%m!=0){
+            higher++;
+        }
+        int d1 = Math.abs(n-lower);
+        int d2 = Math.abs(higher-n);
+        if(d1<d2){
+            return lower;
+            
+        }
+        else if(d1>d2){
+            return higher;
+        }
+        else {
+            if(Math.abs(lower)>Math.abs(higher)){
+                return lower;
+            }
+            else{
+                return higher;
+            }
+        }
+            
+    }
+}
