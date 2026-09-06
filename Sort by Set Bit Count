@@ -1,0 +1,18 @@
+class Solution {
+    ArrayList<Integer> sortBySetBitCount(int[] arr) {
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for (int x : arr) {
+            list.add(x);
+        }
+
+        Collections.sort(list, (a, b) -> {
+            int countA = Integer.bitCount(a);
+            int countB = Integer.bitCount(b);
+
+            return Integer.compare(countB, countA);
+        });
+
+        return list;
+    }
+}
