@@ -1,0 +1,14 @@
+class Solution {
+    public int getMaxVal(List<Integer> arr, int k) {
+        Collections.sort(arr);
+
+        int sum = 0;
+        int n = arr.size();
+
+        for (int i = n - 1; i >= n - k; i--) {
+            sum += arr.get(i);
+        }
+
+        return sum;
+    }
+}
