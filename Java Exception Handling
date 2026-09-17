@@ -1,0 +1,25 @@
+class Solution {
+    public int findMin(int a, int b) {
+        
+        int min = Integer.MAX_VALUE;
+
+        // Addition
+        min = Math.min(min, a + b);
+
+        // Subtraction
+        min = Math.min(min, a - b);
+
+        // Multiplication
+        min = Math.min(min, a * b);
+
+        // Division
+        try {
+            min = Math.min(min, a / b);
+        } 
+        catch (ArithmeticException e) {
+            // Ignore division by zero
+        }
+
+        return min;
+    }
+}
