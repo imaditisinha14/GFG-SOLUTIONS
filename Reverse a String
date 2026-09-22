@@ -1,0 +1,24 @@
+```java
+import java.util.*;
+
+class Solution {
+    public static String reverseString(String s) {
+        
+        Stack<Character> st = new Stack<>();
+        
+        // Push every character
+        for (char ch : s.toCharArray()) {
+            st.push(ch);
+        }
+        
+        // Pop and create reversed string
+        String ans = "";
+        
+        while (!st.isEmpty()) {
+            ans = ans + st.pop();
+        }
+        
+        return ans;
+    }
+}
+```
