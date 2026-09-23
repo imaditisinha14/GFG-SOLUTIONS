@@ -1,0 +1,27 @@
+class Solution {
+    public boolean canSplit(int[] arr) {
+
+        int totalSum = 0;
+
+        // Find total sum
+        for (int i = 0; i < arr.length; i++) {
+            totalSum += arr[i];
+        }
+
+        int leftSum = 0;
+
+        // Try every possible split
+        for (int i = 0; i < arr.length - 1; i++) {
+
+            leftSum += arr[i];
+
+            int rightSum = totalSum - leftSum;
+
+            if (leftSum == rightSum) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+}
